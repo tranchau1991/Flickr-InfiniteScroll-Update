@@ -6,7 +6,7 @@ function updatestatus(){
 function ajaxProcess() {
 
 var searchTerm = $("#term").val(); // get the user-entered search term
-var URL2='http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=e73c3c2e11d5780e5370d864dccff2cf&'; 
+var URL2='https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=e73c3c2e11d5780e5370d864dccff2cf&'; 
 var tags="&tags="+ searchTerm;
 var tagmode="&tagmode=any";
 var jsonFormat = "&format=json";					
@@ -25,10 +25,10 @@ var ajaxURL= URL2+"per_page="+perpage+"&page="+currentPage+tags+tagmode+jsonForm
 							// $("figure").empty();
 							$.each(data.photos.photo, function(i,photo) {
   							 // $("<figure></figure>").hide().append('<img src="http://farm'+photo.farm+'.static.flickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'_q.jpg"/>').appendTo("#photos").fadeIn(2000);	
-							  var link_big = "http://farm"+photo.farm+".static.flickr.com/"+photo.server+"/"+photo.id+"_"+photo.secret+"_c.jpg";
+							  var link_big = "https://farm"+photo.farm+".static.flickr.com/"+photo.server+"/"+photo.id+"_"+photo.secret+"_c.jpg";
 							  var photoHTML="";
 							  photoHTML+= "<figure onclick='change123(&#39;"+link_big+"&#39;);'> <img src='";
-							  photoHTML+="http://farm"+photo.farm+".static.flickr.com/"+photo.server+"/"+photo.id+"_"+photo.secret+"_q.jpg'"; 
+							  photoHTML+="https://farm"+photo.farm+".static.flickr.com/"+photo.server+"/"+photo.id+"_"+photo.secret+"_q.jpg'"; 
 							  photoHTML+=" title='"+photo.title+"'" ;
 							  photoHTML+="></figure>";
 							   //photoHTML+="<figurecaption>"+photo.title+"</figurecaption><br>";
