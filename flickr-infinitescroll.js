@@ -6,7 +6,7 @@ function updatestatus(){
 function ajaxProcess() {
 
 var searchTerm = $("#term").val(); // get the user-entered search term
-var URL2='https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=e73c3c2e11d5780e5370d864dccff2cf&'; 
+var URL2='https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=ac965884746091b742291c6178ae48c6&'; 
 var tags="&tags="+ searchTerm;
 var tagmode="&tagmode=any";
 var jsonFormat = "&format=json";					
